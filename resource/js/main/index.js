@@ -1,0 +1,6 @@
+/**
+ * Created by ukerxi.
+ */
+$(function(){
+
+});

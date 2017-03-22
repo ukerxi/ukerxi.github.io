@@ -16,8 +16,9 @@
 	width: 1216px;
 	height: 141px;
 	background: url(../../images/main/index/cir1.png) no-repeat 0 0;
-	left: 0;
+	left: 50%;
 	top: 337px;
+	margin-left: -608px;
 	animation: rotate1 3s cubic-bezier(.41,.03,.22,.84) 1 both;
 	-webkit-animation: rotate1 3s cubic-bezier(.41,.03,.22,.84) 1 both;
     -moz-animation: rotate1 3s cubic-bezier(.41,.03,.22,.84) 1 both;
@@ -35,8 +36,9 @@
 	width: 891px;
 	height: 77px;
 	background: url(../../images/main/index/cir2.png) no-repeat 0 0;
-	left: 154px;
+	left: 50%;
 	top: 369px;
+	margin-left: -445px;
 	-webkit-transform: rotate(155deg);
 	-moz-transform: rotate(155deg);
 	-ms-transform: rotate(155deg);
@@ -55,8 +57,9 @@
 	width: 660px;
 	height: 660px;
 	background: url(../../images/main/index/cir3.png) no-repeat 0 0;
-	left: 277px;
+	left: 50%;
 	top: 84px;
+	margin-left: -330px;
 	-webkit-transform: rotate(-180deg);
 	-moz-transform: rotate(-180deg);
 	-ms-transform: rotate(-180deg);
@@ -75,8 +78,9 @@
 	width: 263px;
 	height: 476px;
 	background: url(../../images/main/index/cir4.png) no-repeat 0 0;
-	left: 476px;
+	left: 50%;
 	top: 169px;
+	margin-left: -132px;
 	-webkit-transform: rotate(180deg);
 	-moz-transform: rotate(180deg);
 	-ms-transform: rotate(180deg);
