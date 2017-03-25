@@ -6,8 +6,12 @@
     <meta name="keywords" content="尤客希">
     <meta name="description" content="尤客希">
     <title>尤客希个人主页</title>
-    <link rel="stylesheet" href="/resource/css/main/index.css">
     <link rel="stylesheet" href="/resource/css/normalize.css">
+    <link rel="stylesheet" href="/resource/css/main/common.css">
+    <link rel="stylesheet" href="/resource/css/main/index.css">
+    <script type="text/javascript">
+        var preText = "../ukerxi.github.io";
+    </script>
 </head>
 <body>
     <div class="view-banner">
@@ -24,24 +28,23 @@
     </div>
     <div class="view-menu">
         <div class="wrap-menu">
-            <a href="/page/mian/technology/17030401.html" class="item">文章</a>
+            <a href="/page/main/nav/technology.html" class="item">文章</a>
             <a href="javascript:void(0);" class="item">资源</a>
             <a href="javascript:void(0);" class="item">关于</a>
         </div>
     </div>
     <div class="view-main">
-        <div class="wrap-content">
-            <div class="item">
-                <p class="title">标题</p>
-                <p class="text">描述福建省福建师范</p>
-            </div>
-            <div class="item">
-                <p class="title">标题</p>
-                <p class="text">描述福建省福建师范</p>
-            </div>
+        <div class="wrap-content" id="list_article">
+            <template  v-cloak v-for="item in items">
+                <div class="item" v-on:click="linkPage" v-bind:data-src="item.link">
+                    <p class="title">{{item.title}}</p>
+                    <p class="text">{{item.text}}</p>
+                </div>
+            </template>
         </div>
     </div>
-    <script type="text/javascript" src="/resource/plugins/jquery/jquery.js"></script>
+    <script type="text/javascript" src="/resource/js/main/common.js"></script>
+    <script type="text/javascript" src="/resource/plugins/vue/vue.js"></script>
     <script type="text/javascript" src="/resource/js/main/index.js"></script>
 </body>
 </html>
