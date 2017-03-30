@@ -4,7 +4,13 @@
     font-size: 14px;
     line-height: 1.5;
 }
+.text-indent{
+    text-indent: 2em;
+}
 
+.no-margin{
+    margin: 0;
+}
 /**** banner文字 *****/
 .wrap-title{
     position: absolute;
@@ -54,7 +60,10 @@
     font-size: 14px;
     text-decoration: none;
 }
-.view-menu .wrap-menu .item:hover{
+.view-menu .wrap-menu .item.title{
+    font-size: 18px;
+}
+.view-menu .wrap-menu .item:not(.title):hover{
     text-decoration: underline;
     color: #ddd;
 }
@@ -66,6 +75,9 @@
     min-width: 800px;
     padding: 0;
     overflow: hidden;
+}
+.view-main.padding-top{
+    padding-top: 20px;
 }
 .view-main .wrap-content{
     margin: 0;
@@ -101,6 +113,7 @@
 .view-main .item .text{
     color: #999;
     font-size: 14px;
+    word-break: break-all;
 }
 
 /**** 控制vue不显示未编译内容 *****/

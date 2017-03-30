@@ -1,0 +1,180 @@
+@charset "utf-8";
+/*********** 分页（按照具体的使用进行重定义样式 ） **************/
+
+.pagination-warp {
+    margin:0;
+    padding: 0;
+    max-width: 100%;
+    font-size: 0;
+    line-height: 20px;
+    color: #666;
+    text-align: right;
+    vertical-align: middle;
+    background-color: #fff;
+}
+
+.pagination-warp .total-page {
+	box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0 10px 0 0;
+    padding: 0 6px;
+    font-size: 14px;
+    border: solid 1px #f0f0f0;
+    display: inline-block;
+    height: 32px;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+.pagination-warp .total-page .total-page-num {
+	display: inline-block;
+	box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 5px 10px;
+	border-left: solid 1px #f0f0f0;
+	border-right: solid 1px #f0f0f0;
+	margin: 0 5px 0;
+}
+
+.pagination-warp .total-page .total-page-record {
+	display: inline-block;
+	box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 5px;
+	color: #03b3ff;
+}
+
+.pagination-warp .pre, .pagination-warp .next {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0 12px;
+    border: solid 1px #f0f0f0;
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    color: #999;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #fff;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+   /*  background: url(../../image/admin/icon-prev.png) no-repeat 50% 50%; */
+}
+.pagination-warp .next{
+	margin-right: 0;
+	/* background: url(../../image/admin/icon-next.png) no-repeat 50% 50%; */
+}
+
+.pagination-warp .pre.j-page-pre, .pagination-warp .next.j-page-next {
+    color: #999;
+}
+
+.pagination-warp .pre.j-page-pre:hover, .pagination-warp .next.j-page-next:hover {
+    color: #fff;
+    background-color: #656565;
+}
+
+.pagination-warp .link {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-size: 14px;
+    min-width: 30px;
+    padding: 0 8px;
+    border: solid 1px #f0f0f0;
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    cursor: pointer;
+    color: #696969;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #fff;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.pagination-warp .link.active {
+    color: #fff;
+    background-color: #656565;
+}
+
+.pagination-warp .link:hover {
+    color: #fff;
+    background-color: #656565;
+}
+
+.pagination-warp .ellipse {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-size: 14px;
+    min-width: 30px;
+    padding: 0 8px;
+    border: solid 1px #f0f0f0;
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    cursor: pointer;
+    color: #696969;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #fff;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.pagination-warp .go {
+	box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0 2px 0 5px;
+    padding: 0 6px;
+    font-size: 14px;
+    border: solid 1px #f0f0f0;
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #fff;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.pagination-warp .go:hover {
+    color: #666;
+    background-color: #fff;
+}
+
+.pagination-warp input {
+	box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 36px;
+    margin: 0 2px 0 5px;
+    padding: 0 6px;
+    border: solid 1px #f0f0f0;
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #fff;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}

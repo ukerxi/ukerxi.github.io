@@ -8,27 +8,35 @@
     <title>尤客希的文章汇总</title>
     <link rel="stylesheet" href="../../../resource/css/normalize.css">
     <link rel="stylesheet" href="../../../resource/css/main/common.css">
+    <link rel="stylesheet" href="../../../resource/plugins/pagination/pagination.css">
 </head>
 <body>
 <div class="view-menu">
     <div class="wrap-menu">
-        <span class="item">文章列表</span>
+        <span class="item title">文章列表</span>
     </div>
 </div>
 <div class="view-main">
-    <div class="wrap-content">
-        <div class="item">
-            <p class="title">标题</p>
-            <p class="text">描述福建省福建师范</p>
-        </div>
-        <div class="item">
-            <p class="title">标题</p>
-            <p class="text">描述福建省福建师范</p>
-        </div>
+    <div class="wrap-content" id="render_list">
+        <!-- 列表渲染 -->
+    </div>
+    <div class="wrap-pagination" id="pagination_list">
+        <!-- 分页渲染 -->
     </div>
 </div>
+<!-- 列表模板 -->
+<script type="text/x-template" id="tpl_list">
+    {{#each records as record idx}}
+    <div class="item j-item" data-src="{{record.src}}">
+        <p class="title">{{record.title}}</p>
+        <p class="text">{{record.text}}</p>
+    </div>
+    {{/each}}
+</script>
 
 <script type="text/javascript" src="../../../resource/plugins/jquery/jquery.js"></script>
+<script type="text/javascript" src="../../../resource/plugins/jquery/jquery.template.js"></script>
+<script type="text/javascript" src="../../../resource/plugins/pagination/pagination.js"></script>
 <script type="text/javascript" src="../../../resource/js/main/technology.js"></script>
 </body>
 </html>
