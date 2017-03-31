@@ -54,6 +54,7 @@
     overflow: hidden;
     text-align: center;
     background-color: #32A7B8;
+    padding: 4px 0;
 }
 .view-menu .wrap-menu{
     display: inline-block;
