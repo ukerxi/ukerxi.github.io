@@ -35,6 +35,26 @@ var pageData ={
             src: "http://note.youdao.com/noteshare?id=8b426b675f67301b2f86f3856229a952&sub=53A5F5C1B85C4C838FDA1C1F36E7FA35"
         },
         {
+            title: "canvas（四）：设计过程中运用到数学&物理知识",
+            text:"简单canvas操作，绘制文本，绘制图片，制作动画",
+            src: "http://note.youdao.com/noteshare?id=d0838833372f20eb733809297facac2f&sub=FEF633C6E00B467A8316CD0A83B987D6"
+        },
+        {
+            title: "canvas（三）：文本&图像操作",
+            text:"简单canvas操作，绘制文本，绘制图片，制作动画",
+            src: "http://note.youdao.com/noteshare?id=66fa8ad49694c99ef7e144b2835329be&sub=5C73699A95AE48BAB2CECDB42CFB72F0"
+        },
+        {
+            title: "canvas（二）：接口方法",
+            text:"简单canvas操作，绘制文本，绘制图片，制作动画",
+            src: "http://note.youdao.com/noteshare?id=f21adcab4a5b61799cbb1ac00f72ffdc&sub=2E36BDA4E64C4874BB09F6B7EDF9E408"
+        },
+        {
+            title: "canvas（一）：基础",
+            text:"简单canvas操作，绘制文本，绘制图片，制作动画",
+            src: "http://note.youdao.com/noteshare?id=9e9fd3d9623c251fea494ca3e937871c&sub=5A30EC353E924219BFD254D3C76125EC"
+        },
+        {
             title: "收集一些比较有用的网站合集",
             text:"包含不同领域的学习资料",
             src: "http://note.youdao.com/noteshare?id=49da3042663052a452f8232c494c647f&sub=A6C6451E466C4648A8E2C64021054EFB"

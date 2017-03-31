@@ -62,15 +62,95 @@ CommonUtils.addEventHandle(window, "load", function(){
             }
         }
     });
+    var contextId = document.getElementById("view_canvas");
+    // 配置信息
+    var gameConfig = {
+        imgItems: null, // 缓存图片
+        items: [] // 绘制元素
+    };
+    // canvas 动画操作
+    if(CommonUtils.checkCanvas()){
+        // 先加载图片
+        gameConfig.imgItems = CommonUtils.loadImg({
+            windmillRed: "/resource/images/main/index/windmill-red.png",
+            windmillBlue: "/resource/images/main/index/windmill-blue.png"
+        }, gameLoop);
+    }
+    // 动画循环
+    function gameLoop() {
+        // 绘制画布
+        drawScreen();
+        requestAnimationFrame(gameLoop);
+    }
+    // 绘制动画
+    function drawScreen() {
+        var context = contextId.getContext("2d");
+        var len = gameConfig.items.length;
+        if(len === 0){
+            gameConfig.items.push(new GameItem("windmillRed", gameConfig.imgItems.windmillRed, 4, 650,125, 50, 50));
+            gameConfig.items.push(new GameItem("windmillBlue", gameConfig.imgItems.windmillBlue, 2, 714, 80, 60, 60));
+
+            // 添加鼠标滑过事件
+            CommonUtils.addEventHandle(document.getElementById("wrap_canvas"), "mousemove", function(event){
+                handleWind (event);
+            });
+            // 添加鼠标停留事件
+            CommonUtils.addEventHandle(document.getElementById("wrap_canvas"), "onmouseover", function(event){
+                handleWind (event);
+            });
+
+            // 模拟风额效果
+            function handleWind (event){
+                var _event = CommonUtils.getEvent(event);
+                var offsetWidth = document.getElementById("wrap_canvas").offsetWidth;
+                if(_event && _event.clientX){
+                    if((offsetWidth - _event.clientX <= 360) && (offsetWidth -_event.clientX >= 290)){
+                        if(_event.clientY >= 105 && _event.clientY <= 190 && gameConfig.items[0].speed <40){
+                            gameConfig.items[0].speed += 2;
+                        }
+                    }
+                    if((offsetWidth - _event.clientX <= 290) && (offsetWidth -_event.clientX >= 220)){
+                        if(_event.clientY >= 60  && _event.clientY <= 150 && gameConfig.items[1].speed <40){
+                            gameConfig.items[1].speed  += 2;
+                        }
+                    }
+                }
+            }
+
+        }
+        // 开始绘制
+        context.clearRect(0, 0, 800, 200);
+        context.fillStyle ="#999";
+        context.fillRect(673,150, 4, 100);
+        context.fillRect(740,120, 4, 100);
+        for(var i=0, len = gameConfig.items.length; i<len; i++){
+            if( gameConfig.items[i].speed > gameConfig.items[i].originSpeed){
+                gameConfig.items[i].speed --;
+            }else if(gameConfig.items[i].speed < gameConfig.items[i].originSpeed){
+                gameConfig.items[i].speed = gameConfig.items[i].originSpeed
+            }
+            gameConfig.items[i].range  += gameConfig.items[i].speed;
+            context.save();
+            context.setTransform(1, 0, 0, 1, 0, 0);
+            context.translate(gameConfig.items[i].px +0.5*gameConfig.items[i].width, gameConfig.items[i].py +0.5*gameConfig.items[i].height); // 移动原点到中心位置
+            context.rotate(gameConfig.items[i].range* Math.PI/180); // 设置旋转
+            context.drawImage(gameConfig.items[i].img, -0.5*gameConfig.items[i].width, -0.5*gameConfig.items[i].height,gameConfig.items[i].width, gameConfig.items[i].height);
+            context.restore();
+        }
+    }
+    // 构造绘制类
+    function GameItem(id, img, speed, px, py, width, height){
+        this.id = id;
+        this.speed = speed;
+        this.originSpeed = speed;
+        this.range = 0;
+        this.img = img;
+        this.px = px;
+        this.py = py;
+        this.width = width;
+        this.height = height;
+    }
 });
-
-var test = {};
-var test1 = [];
-
-console.log(test instanceof Object);
-console.log(test1 instanceof Object);
-
-
 
 
 

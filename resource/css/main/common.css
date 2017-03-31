@@ -23,6 +23,7 @@
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    z-index: 100;
 }
 .wrap-title .text{
     text-align: center;
@@ -34,6 +35,18 @@
     width: 200px;
     height: auto;
 }
+/**** canvas动画 *****/
+.wrap-canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    z-index: 99;
+    overflow: hidden;
+}
 
 /**** 顶部导航菜单 *****/
 .view-menu{
@@ -44,8 +57,9 @@
 }
 .view-menu .wrap-menu{
     display: inline-block;
-    width: 60%;
-    min-width: 800px;
+    width: 80%;
+    min-width: 300px;
+    max-width: 1200px;
     text-align: left;
     overflow: hidden;
     vertical-align: top;
@@ -71,8 +85,9 @@
 .view-main{
     position: relative;
     margin: 0 auto;
-    width: 60%;
-    min-width: 800px;
+    width: 80%;
+    min-width: 300px;
+    max-width: 1200px;
     padding: 0;
     overflow: hidden;
 }
