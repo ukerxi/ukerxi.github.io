@@ -29,6 +29,11 @@ CommonUtils.addEventHandle(window, "load", function(){
                     src: "http://note.youdao.com/noteshare?id=2ea9de535f27a6983e4b8487a1f955eb&sub=A18FFCC724574905B0594A844571410D"
                 },
                 {
+                    title: "js注意事项——作用域&执行环境",
+                    text:"javaScript以其灵活性而著称，但是事物都具有两面性，灵活的同时，会带来一些难于理解的行为，所以列举了一些注意事项",
+                    src: "http://note.youdao.com/noteshare?id=02d974c831cb8daa622265f5e38ef7f5&sub=8EDA10DE5FBA40279A0AC38A2BA7F118"
+                },
+                {
                     title: "读jQuery源码的收获",
                     text:"每过一段时间，读一次，根据自己的对于js的理解的加深，又会有不同的收获",
                     src: "http://note.youdao.com/noteshare?id=82819da71a1372b1eae89beceaaaba7a&sub=13A76EB75673454D9BE41B7677F235E6"
